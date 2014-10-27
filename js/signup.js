@@ -1,4 +1,23 @@
-/*
-    Signup Form Script
-    This script will load the state select list and validate the form before submission
-*/
+function onReady() {
+
+	var signup = document.getElementById('signup');
+    var state = signup.elements['state'];
+    var idx;
+    var option;
+    var statename;
+    for (idx = 0; idx < usStates.length; idx++) {
+        option = document.createElement('option');
+        statename = usStates[idx]
+        option.value = statename.code;
+        option.innerHTML = statename.name;
+        stateSelect.appendChild(option);
+    }
+
+    signup.addEventListener('submit', onSubmit);
+
+} //onReady()
+
+document.addEventListener('DOMContentLoaded', onReady);
+
+
+}
