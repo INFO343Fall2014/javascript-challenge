@@ -7,7 +7,7 @@ function onReady() {
     var statename;
     for (idx = 0; idx < usStates.length; idx++) {
         option = document.createElement('option');
-        statename = usStates[idx]
+        statename = usStates[idx];
         option.value = statename.code;
         option.innerHTML = statename.name;
         state.appendChild(option);
