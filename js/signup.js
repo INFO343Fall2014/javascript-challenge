@@ -1,3 +1,4 @@
+"use strict";
 function onReady() {
 
 	var signup = document.getElementById('signup');
