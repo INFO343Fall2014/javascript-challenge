@@ -10,7 +10,7 @@ function onReady() {
         statename = usStates[idx]
         option.value = statename.code;
         option.innerHTML = statename.name;
-        stateSelect.appendChild(option);
+        state.appendChild(option);
     }
 
     signup.addEventListener('submit', onSubmit);
