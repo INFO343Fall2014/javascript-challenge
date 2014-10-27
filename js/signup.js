@@ -13,12 +13,8 @@ function onReady() {
         option.innerHTML = statename.name;
         state.appendChild(option);
     }
-
     signup.addEventListener('submit', onSubmit);
-
 } //onReady()
 
 document.addEventListener('DOMContentLoaded', onReady);
 
-
-}
