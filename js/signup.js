@@ -1,8 +1,7 @@
 "use strict";
 
 function onReady() {
-
-	var signup = document.getElementById('signup');
+    var signup = document.getElementById('signup');
     var state = signup.elements['state'];
     var idx;
     var option;
