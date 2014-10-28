@@ -104,8 +104,7 @@ function validateRequiredField(field) {
         	if (yearsDiff < 13) {
         		field.className = 'form-control invalid-field';
                 var birthdateMessage = document.getElementById('birthdateMessage');
-                birthdateMessage.innerHTML = 'User is only' + yearsDiff + 'Must be 13 years old to signup.';
-                birthdateMessage.style.display ='block';
+                birthdateMessage.innerHTML = 'Must be 13 years old to signup.';
         		return !valid;
         	}
         }
