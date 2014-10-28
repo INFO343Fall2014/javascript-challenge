@@ -1,5 +1,10 @@
+//The purpose of "use strict" is to indicate that the code should be executed in "strict mode".
+
+With strict mode, you cannot, for example, use undeclared variables.
 "use strict";
 
+/* function onReady()
+This function create a dropdown menu for all the States in US. */
 function onReady() {
     var signup = document.getElementById('signup');
     var state = signup.elements['state'];
@@ -18,7 +23,7 @@ function onReady() {
 
 document.addEventListener('DOMContentLoaded', onReady);
 
-//The if statement to check the occupation of other. If id is occupationOther, else for id that is not occupationOther.
+//Dom is loaded and ready to be manipulated. The if statement to check the occupation of other. If id is occupationOther, else for id that is not occupationOther.
 function show() {
     document.addEventListener('change', function() {
         if (document.getElementById('occupation').value	== 'other') {
@@ -30,7 +35,8 @@ function show() {
 }
 document.addEventListener('DOMContentLoaded', show);
 
-//function click for no thank, that navigate the user to left the website.
+/*The DOM is loaded and ready to be manipulated. function click for no thank, that navigate the user to leave the website.
+Winddow should pop up asking for confirm from user. */
 function click () {
     var cancelButton = document.getElementById('cancelButton');
     cancelButton.addEventListener('click', function() {
@@ -41,6 +47,7 @@ function click () {
 }
 document.addEventListener('DOMContentLoaded', click);
 
+/* This function is called when user submit the sign up form. */
 function onSubmit(evt) {
     var valid = validateForm(this);
     if (!valid) {
@@ -74,6 +81,9 @@ function validateForm(form) {
     return valid;
 } 
 
+/* The function checks if the required field by looking at its value, which is zip code. If the value is empty
+or doesn't match a specific required field's requirements, then it will return false in this case. */
+
 function validateRequiredField(field) {
     var value = field.value;
     value = value.trim();
@@ -87,6 +97,8 @@ function validateRequiredField(field) {
                 return !valid;
             }
         }
+/* This function checks if the required field by looking at its value, which is birthdate. If the value if empty
+or doesn't match a specific required field's requirements, then it will return false. */
         if (field.name == 'birthdate') {
             var today = new Date();
             var birthdate = new Date(field.value);
