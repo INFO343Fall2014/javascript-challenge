@@ -84,7 +84,7 @@ function validateRequiredField(field) {
     var valid = value.length > 0;
 
     if (valid) {
-        if (field.name = 'zip') {
+        if (field.name == 'zip') {
         	var zipRegExp = new RegExp('^\\d{5}$');
         	var zipValid = zipRegExp.test(field.value);
         	if (!zipValid) {
